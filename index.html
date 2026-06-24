@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sinkhole Chalet | Private Chalet in Dibab, Oman</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&family=Tajawal:wght@400;500;700;900&family=Amiri:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        :root {
+            --dark-slate: #21323a;
+            --gold-premium: #c29b38;
+            --soft-white: #f8fafc;
+            --luxury-black: #111b21;
+            --teal-accent: #2e93a4;
+            --gallery-bg: #1c2830;
+            --cta-bg: #f1f5f9;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
+        
+        html[dir="rtl"] body { font-family: 'Tajawal', sans-serif; }
+        html[dir="ltr"] body { font-family: 'Outfit', sans-serif; }
+        
+        body { background-color: var(--soft-white); color: #334155; overflow-x: hidden; }
+
+        header { 
+            background: linear-gradient(rgba(33, 50, 58, 0.4), rgba(17, 27, 33, 0.85)), url('https://sinkhole-chalet.pages.dev/sinkhole/chalet-exterior-night-1200.webp') no-repeat center center/cover; 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 24px; position: relative;
+        }
+
+        .lang-toggle-btn {
+            position: absolute; top: 30px; left: 30px; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3); color: white; padding: 10px 24px; border-radius: 30px; cursor: pointer; 
+            font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 10;
+        }
+        html[dir="ltr"] .lang-toggle-btn { left: auto; right: 30px; }
+        .lang-toggle-btn:hover { background: var(--gold-premium); border-color: var(--gold-premium); transform: scale(1.05); }
+
+        header h1 { font-size: 4rem; margin-bottom: 20px; color: var(--gold-premium); font-weight: 900; }
+        html[dir="rtl"] header h1 { font-family: 'Amiri', serif; font-style: italic; }
+        html[dir="ltr"] header h1 { font-family: 'Playfair Display', serif; }
+        header p { font-size: 1.5rem; max-width: 650px; margin-bottom: 45px; color: #e2e8f0; font-weight: 300; }
+        
+        .btn-luxury-wa { 
+            background: linear-gradient(135deg, #25d366, #128c7e); color: white; padding: 18px 45px; 
+            border-radius: 50px; border: none; font-size: 1.25rem; font-weight: 700; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35); 
+        }
+        .btn-luxury-wa:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5); }
+
+        section { padding: 90px 24px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .section-title { font-size: 2.6rem; color: var(--dark-slate); margin-bottom: 50px; font-weight: 800; text-align: center; }
+        html[dir="rtl"] .section-title { font-family: 'Amiri', serif; font-size: 3.2rem; }
+        .section-title span { color: var(--gold-premium); display: block; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-family: 'Outfit', sans-serif; font-weight: 400; }
+
+        .planning-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; text-align: right; align-items: center; }
+        html[dir="ltr"] .planning-container { text-align: left; }
+        .planning-text h2 { font-family: 'Amiri', serif; font-size: 3.2rem; color: var(--dark-slate); margin-bottom: 20px; font-weight: 800; }
+        html[dir="ltr"] .planning-text h2 { font-family: 'Playfair Display', serif; font-size: 2.6rem; }
+        .planning-text .subtitle { color: #64748b; font-size: 1.15rem; line-height: 1.7; margin-bottom: 20px; }
+        .planning-text .desc { color: #64748b; font-size: 1.1rem; line-height: 1.7; margin-bottom: 35px; }
+        
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 35px; }
+        .stat-card { background: #f1f5f9; padding: 20px 10px; border-radius: 12px; text-align: center; border: 1px solid #e2e8f0; }
+        .stat-card h4 { font-size: 1.4rem; color: var(--dark-slate); margin-bottom: 8px; font-weight: 700; }
+        .stat-card p { font-size: 0.95rem; color: #64748b; }
+
+        .notes-list { margin-bottom: 35px; }
+        .note-item { border-right: 3px solid var(--teal-accent); padding-right: 15px; margin-bottom: 20px; }
+        html[dir="ltr"] .note-item { border-right: none; border-left: 3px solid var(--teal-accent); padding-right: 0; padding-left: 15px; }
+        .note-item h5 { font-size: 1.15rem; color: var(--dark-slate); font-weight: 700; margin-bottom: 5px; }
+        .note-item p { font-size: 1rem; color: #64748b; }
+
+        .action-buttons { display: flex; gap: 15px; justify-content: flex-start; }
+        html[dir="ltr"] .action-buttons { justify-content: flex-start; }
+        .btn-maps { background-color: var(--dark-slate); color: white; padding: 12px 35px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(33,50,58,0.2); }
+        .btn-maps:hover { background-color: var(--gold-premium); transform: translateY(-2px); }
+        .btn-wa-light { background-color: white; color: var(--dark-slate); padding: 12px 35px; border-radius: 30px; font-weight: 700; font-size: 1.1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); cursor: pointer; }
+        .btn-wa-light:hover { background-color: #f8fafc; border-color: #cbd5e1; transform: translateY(-2px); }
+
+        .planning-image { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); height: 100%; min-height: 500px; }
+        .planning-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        .features-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .premium-card { background: white; padding: 50px 35px; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.03); position: relative; overflow: hidden; text-align: center; }
+        .premium-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--gold-premium); transform: scaleX(0); transition: 0.4s ease; }
+        .premium-card:hover::before { transform: scaleX(1); }
+        .premium-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(33, 50, 58, 0.08); }
+        .premium-card .icon-wrapper { width: 80px; height: 80px; background: rgba(194, 155, 56, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; }
+        .premium-card i { font-size: 2.5rem; color: var(--gold-premium); }
+        .premium-card h3 { font-size: 1.6rem; color: var(--dark-slate); margin-bottom: 15px; }
+        .premium-card p { color: #64748b; font-size: 1.05rem; }
+
+        /* قسم المعالم السياحية المحدث */
+        .landmarks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 20px; }
+        .landmark-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: right; }
+        html[dir="ltr"] .landmark-card { text-align: left; }
+        .landmark-img-box { position: relative; height: 200px; width: 100%; overflow: hidden; background-color: var(--dark-slate); }
+        .landmark-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .landmark-card:hover .landmark-img-box img { transform: scale(1.08); }
+        .landmark-badge { position: absolute; top: 15px; right: 15px; background: var(--gold-premium); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2; }
+        html[dir="ltr"] .landmark-badge { right: auto; left: 15px; }
+        .landmark-info { padding: 25px; }
+        .landmark-info h3 { font-size: 1.35rem; color: var(--dark-slate); margin-bottom: 10px; font-weight: 800; }
+        .landmark-info p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+        .landmark-distance { display: flex; align-items: center; gap: 8px; margin-top: 15px; padding-top: 15px; border-top: 1px solid #f1f5f9; color: var(--teal-accent); font-weight: 700; font-size: 0.9rem; }
+
+        .gallery-section { background-color: var(--gallery-bg); padding: 90px 24px; max-width: 100% !important; width: 100%; }
+        .gallery-section .gallery-title { color: white; font-size: 3rem; font-weight: 800; margin-bottom: 15px; text-align: center; font-family: 'Amiri', serif; }
+        html[dir="ltr"] .gallery-section .gallery-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; }
+        .gallery-section .gallery-subtitle { color: #a0aec0; font-size: 1.2rem; margin-bottom: 50px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); height: 280px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform 0.6s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item .item-overlay { position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); opacity: 0; display: flex; align-items: flex-end; padding: 25px; transition: opacity 0.4s ease; }
+        .gallery-item:hover .item-overlay { opacity: 1; }
+        .gallery-item .item-overlay span { color: white; font-size: 1.2rem; font-weight: 600; }
+
+        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 20px; }
+        .amenity-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .amenity-circle { 
+            width: 90px; height: 90px; background-color: var(--teal-accent); 
+            border-radius: 50%; display: flex; justify-content: center; align-items: center; 
+            margin-bottom: 15px; box-shadow: 0 8px 20px rgba(46, 147, 164, 0.2); color: white; font-size: 2rem;
+        }
+        .amenity-item:hover .amenity-circle { transform: scale(1.1) rotate(5deg); background-color: var(--gold-premium); box-shadow: 0 8px 20px rgba(194, 155, 56, 0.3); }
+        .amenity-item span { font-size: 1.15rem; font-weight: 600; color: var(--dark-slate); }
+
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1100px; margin: 0 auto; text-align: right; }
+        html[dir="ltr"] .faq-grid { text-align: left; }
+        .faq-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid #edf2f7; }
+        .faq-card h4 { font-size: 1.3rem; color: var(--dark-slate); margin-bottom: 15px; font-weight: 700; }
+        .faq-card p { color: #64748b; font-size: 1.05rem; line-height: 1.7; }
+
+        .whatsapp-pulse { position: fixed; bottom: 35px; right: 35px; background-color: #25d366; color: white; width: 68px; height: 68px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 36px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); z-index: 1000; cursor: pointer; }
+        html[dir="ltr"] .whatsapp-pulse { right: auto; left: 35px; }
+        .whatsapp-pulse::after { content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%; background: #25d366; opacity: 0.4; z-index: -1; animation: pulseEffect 2s infinite; }
+        @keyframes pulseEffect { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.6); opacity: 0; } }
+.back-to-top {
+            position: fixed; bottom: 120px; right: 44px; background-color: var(--dark-slate); color: white;
+            width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.15); z-index: 999;
+            opacity: 0; pointer-events: none; transform: translateY(20px); transition: all 0.4s ease;
+        }
+        html[dir="ltr"] .back-to-top { right: auto; left: 44px; }
+        .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { background-color: var(--gold-premium); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(194,155,56,0.3); }
+        .cta-section { background-color: var(--cta-bg); max-width: 100% !important; width: 100%; padding: 90px 24px; }
+        .cta-title { font-size: 3.5rem; font-weight: 800; color: var(--dark-slate); margin-bottom: 20px; text-align: center; }
+        html[dir="rtl"] .cta-title { font-family: 'Amiri', serif; }
+        html[dir="ltr"] .cta-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; }
+        .cta-subtitle { color: #64748b; font-size: 1.2rem; max-width: 750px; margin: 0 auto 50px; line-height: 1.7; text-align: center; }
+        
+        .cta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .cta-card { background: white; padding: 35px 20px; border-radius: 16px; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.03); cursor: pointer; }
+        .cta-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        
+        .cta-icon-box { width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; margin-bottom: 20px; }
+        .cta-card h4 { font-size: 1.4rem; font-weight: 800; color: #111b21; margin-bottom: 10px; }
+        .cta-card p { color: #64748b; font-size: 0.95rem; line-height: 1.4; }
+
+        .bg-wa { background-color: rgba(37, 211, 102, 0.1); color: #25d366; }
+        .bg-ig { background-color: rgba(225, 48, 108, 0.1); color: #e1306c; }
+        .bg-bk { background-color: rgba(0, 53, 128, 0.1); color: #003580; }
+        .bg-map { background-color: rgba(100, 116, 139, 0.1); color: var(--dark-slate); }
+
+        footer { background-color: var(--luxury-black); color: #94a3b8; padding: 40px 24px; font-size: 0.95rem; text-align: center; }
+
+        @media (max-width: 992px) {
+            .planning-container { grid-template-columns: 1fr; text-align: center; }
+            html[dir="ltr"] .planning-container { text-align: center; }
+            .action-buttons { justify-content: center; }
+            .planning-image { min-height: 350px; order: -1; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+            .gallery-item { height: 350px; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .cta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
+            html[dir="rtl"] .section-title { font-size: 2.4rem; }
+            .planning-text h2 { font-size: 2.4rem; }
+            .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        }
+        @media (max-width: 480px) {
+            .cta-grid { grid-template-columns: 1fr; }
+        }
+
+        html[dir="rtl"] .en-v { display: none !important; }
+        html[dir="ltr"] .ar-v { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <button class="lang-toggle-btn animate__animated animate__fadeIn" onclick="switchLanguage()">English</button>
+
+    <header>
+        <h1 class="ar-v animate__animated animate__fadeInDown">شاليه هوية نجم</h1>
+        <h1 class="en-v animate__animated animate__fadeInDown">Sinkhole Chalet</h1>
+        <p class="ar-v animate__animated animate__fadeInUp animate__delay-1s">ملاذك الفخم والخاص في بلدة ضباب، مصمم بعناية ليجاور أعظم الروائع الطبيعية بسلطنة عُمان.</p>
+        <p class="en-v animate__animated animate__fadeInUp animate__delay-1s">A luxurious private sanctuary in Dibab, explicitly curated right next to Oman's most breathtaking natural wonder.</p>
+        <a href="https://api.whatsapp.com/send?phone=96892660332" target="_blank" class="btn-luxury-wa animate__animated animate__zoomIn animate__delay-2s" style="text-decoration: none;">
+    <i class="fab fa-whatsapp"></i>
+    <span class="ar-v">احجز إقامتك الفاخرة الآن</span>
+    <span class="en-v">Book Your Luxury Stay</span>
+</a>
+    </header>
+
+    <section style="background-color: white;">
+        <div class="planning-container">
+            <div class="planning-text">
+                <h2 class="ar-v">بين زرقة البحر الساحر وعجائب الطبيعة.. ✨</h2>
+                <h2 class="en-v">Stay in Dibab & Plan the Coast</h2>
+                
+                <p class="subtitle ar-v">مرحباً بكم في Sinkhole Chalet، حيث تلتقي الفخامة بهدوء الطبيعة العذراء في منطقة "ضباب".</p>
+                <p class="subtitle en-v">Dibab is a practical base for guests on the coastal road between Muscat and Sur, especially if visiting Bimmah Sinkhole is on the agenda.</p>
+                
+                <p class="desc ar-v">على بُعد خطوات من أعجوبة "هوية نجم" الشهيرة، نتيح لكم ملاذاً استثنائياً يجمع بين الراحة العصرية والأجواء الاسترخائية الفريدة. هنا، تصنعون أجمل الذكريات مع العائلة والأنشطة التي لا تُنسى. اجعلوا إقامتكم القادمة تجربة تتردد أصداؤها في الذاكرة. 🌴🌊.</p>
+                <p class="desc en-v">Open maps for navigation, then use WhatsApp to confirm arrival time, check-in method, and any practical details before leaving the main highway.</p>
+                
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <h4 class="ar-v">دقائق</h4><h4 class="en-v">Minutes</h4>
+                        <p class="ar-v">إلى منطقة هوية نجم</p><p class="en-v">To Bimmah Sinkhole</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4 class="ar-v">25-35 د</h4><h4 class="en-v">25-35 m</h4>
+                        <p class="ar-v">إلى وادي شاب / طيوي</p><p class="en-v">To Wadi Shab / Tiwi</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4 class="ar-v">سهل</h4><h4 class="en-v">Easy</h4>
+                        <p class="ar-v">الوصول عبر الخرائط</p><p class="en-v">Access via Maps</p>
+                    </div>
+                </div>
+
+                <div class="notes-list">
+                    <div class="note-item">
+                        <h5 class="ar-v">أفضل استخدام</h5><h5 class="en-v">Best Use</h5>
+                        <p class="ar-v">قاعدة خاصة لزيارة هوية نجم والطريق الساحلي وأمسيات هادئة بجانب المسبح.</p>
+                        <p class="en-v">A private base for visiting Bimmah Sinkhole, the coastal road, and peaceful evenings by the pool.</p>
+                    </div>
+                    <div class="note-item">
+                        <h5 class="ar-v">ملاحظة قيادة</h5><h5 class="en-v">Driving Note</h5>
+                        <p class="ar-v">الأوقات تقريبية ويُفضل مراجعتها في الخرائط قبل الانطلاق.</p>
+                        <p class="en-v">Times are approximate and it is recommended to check maps before departing.</p>
+                    </div>
+                    <div class="note-item">
+                        <h5 class="ar-v">قبل الوصول</h5><h5 class="en-v">Before Arrival</h5>
+                        <p class="ar-v">راسلنا عبر واتساب لتنسيق الدخول والأسئلة الخاصة بالمسبح وأي تفاصيل تريد تأكيدها.</p>
+                        <p class="en-v">Message us via WhatsApp to coordinate check-in, pool inquiries, and any details you wish to confirm.</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="https://maps.app.goo.gl/JswkbRzMsK6tkWxz5?g_st=am"_blank"_blank" class="btn-maps">
+                        <span class="ar-v">الخرائط</span><span class="en-v">Maps</span>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=96892660332" class="btn-maps">
+                        <span class="ar-v">واتساب</span><span class="en-v">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="planning-image">
+                <img src="https://sinkhole-chalet.pages.dev/sinkhole/chalet-exterior-night-800.webp" alt="Bimmah Sinkhole Nature">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">
+            <span class="ar-v">المساحات الرئيسية</span>
+            <span class="en-v">Main Spaces</span>
+            <div class="ar-v">تفاصيل الإقامة الفاخرة</div>
+            <div class="en-v">Luxury Living Breakdown</div>
+        </h2>
+        <div class="features-container">
+            <div class="premium-card">
+                <div class="icon-wrapper"><i class="fas fa-water"></i></div>
+                <h3 class="ar-v">مسبح خاص مضاء</h3><h3 class="en-v">Private Lit Pool</h3>
+                <p class="ar-v">مسبح خارجي فسيح يتميز بنظام إضاءة ليلي ساحر يضمن لك الخصوصية الكاملة.</p>
+                <p class="en-v">A stunningly lit outdoor pool tailored to provide utmost nighttime luxury and complete privacy.</p>
+            </div>
+            <div class="premium-card">
+                <div class="icon-wrapper"><i class="fas fa-bed"></i></div>
+                <h3 class="ar-v">غرفتان نوم ماستر</h3><h3 class="en-v">2 Master Bedrooms</h3>
+                <p class="ar-v">غرف نوم مجهزة بأرقى المفروشات الفندقية وتكييف متطور لضمان راحتكم.</p>
+                <p class="en-v">Beautiful master bedrooms featuring boutique bedding and climate control for a restful sleep.</p>
+            </div>
+            <div class="premium-card">
+                <div class="icon-wrapper"><i class="fas fa-tree"></i></div>
+                <h3 class="ar-v">فناء عائلي متكامل</h3><h3 class="en-v">Outdoor Oasis</h3>
+                <p class="ar-v">مسطحات خضراء وجلسات عائلة مجهزة بالكامل لأدوات الشواء والسمر تحت النجوم.</p>
+                <p class="en-v">Spacious green lawns properly equipped for elite family gatherings and live BBQ nights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المعالم السياحية القريبة (10 معالم مربوطة بالصور 11-20) -->
+    <section style="background-color: #fafafa; border-top: 1px solid #f1f5f9;">
+        <h2 class="section-title">
+            <span class="ar-v">استكشف الجوار</span>
+            <span class="en-v">Explore the Vicinity</span>
+            <div class="ar-v">معالم قريبة لا تُفوّت</div>
+            <div class="en-v">Nearby Attractions</div>
+        </h2>
+        <div class="landmarks-grid">
+            
+            <!-- معلم 11 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <span class="landmark-badge ar-v">الأقرب إلينا</span>
+                    <span class="landmark-badge en-v">Closest to Us</span>
+                    <img src="images/11.JPG" alt="Bimmah Sinkhole">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">منتزه هوية نجم</h3><h3 class="en-v">Bimmah Sinkhole</h3>
+                    <p class="ar-v">واحد من أجمل المسابح الطبيعية في العالم، يقع على بعد خطوات معدودة من الشاليه.</p>
+                    <p class="en-v">One of the most spectacular natural swimming pools globally, located just steps away.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-walking"></i>
+                        <span class="ar-v">دقيقة واحدة فقط</span><span class="en-v">Only 1 minute away</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 12 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/12.JPG" alt="Dibab Beach">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">شاطئ ضباب </h3><h3 class="en-v">Dibab Beach</h3>
+                    <p class="ar-v">شاطئ بكر ساحر يدمج الرمال البيضاء الناعمة بزرقة البحر الهادئة لراحة لا تضاهى.</p>
+                    <p class="en-v">A pristine sandy beach blending soft white shores with clear blue waters for premium relaxation.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">3 دقائق بالسيارة</span><span class="en-v">3 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 13 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/13.JPG" alt="Wadi Shab">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">شاطىء بمة الرملي</h3><h3 class="en-v">Wadi Shab</h3>
+                    <p class="ar-v">شريط ساحلي ساحر يجمع بين رمالة الناعمة ومياهه الفيروزية المتلألئة، ليقدم ملاذا مثاليا لعشاق الطبيعة البكر والتخييم.</p>
+                    <p class="en-v">An iconic adventure hub featuring deep canyons, emerald pools, and hidden waterfalls.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">20 دقيقة بالسيارة</span><span class="en-v">20 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 14 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/14.JPG" alt="Wadi Tiwi">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">وادي ميبام</h3><h3 class="en-v">Wadi Tiwi</h3>
+                    <p class="ar-v">الجنة الخفية بين أحضان الجبال الشاهقة، حيث تتدفق الشلالات النقية لتلتقي بالبرك المائية الزمردية الساحرة ومزارع النخيل الخضراء المعلقة.</p>
+                    <p class="en-v">A lush valley known for its deep historical villages and emerald green date plantations.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">25 دقيقة بالسيارة</span><span class="en-v">25 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 15 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/15.JPG" alt="Fins Beach">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">وادي شاب</h3><h3 class="en-v">Fins Beach (White Beach)</h3>
+                    <p class="ar-v">رحلة مغامرات مشوقة بين المنحدرات الجبلية والمياه الفيروزية والكهوف المخفية.</p>
+                    <p class="en-v">One of the most beautiful white-sand beaches, perfect for camping and ultimate relaxation.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">12 دقيقة بالسيارة</span><span class="en-v">12 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 16 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/16.JPG" alt="Wadi Al Arbaeen">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">وادي طيوي</h3><h3 class="en-v">Wadi Al Arbaeen</h3>
+                    <p class="ar-v">وادي بكر يتميز ببركه المائية العميقة وجريان مياهه الدائم وسط الجبال الشاهقة.</p>
+                    <p class="en-v">A pristine valley famous for its deep natural pools and year-round running fresh water.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">35 دقيقة بالسيارة</span><span class="en-v">35 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 17 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/17.JPG" alt="Ancient Qalhat">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">وادي العربيين</h3><h3 class="en-v">Ancient City of Qalhat</h3>
+                    <p class="ar-v">وادي بكر يتميز ببركه المائية العميقة وجريان مياهه الدائم وسط الجبال الشاهقة.</p>
+                    <p class="en-v">A UNESCO World Heritage site, home to the Bibi Maryam tomb reflecting rich coastal history.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">35 دقيقة بالسيارة</span><span class="en-v">35 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 18 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/18.JPG" alt="Sur City">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">قلعة الصيرة</h3><h3 class="en-v">Sur Maritime City</h3>
+                    <p class="ar-v">حارس الساحل العريق في ولاية قريات، حيث يرتفع البرج شامخا فوق صخرتة البحرية الفريدة ، ليلتقي التاريخ العماني العتيق بأمواج البحر الزرقاء.</p>
+                    <p class="en-v">The historic seafaring city famous for traditional dhow factories and its iconic lighthouse.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">45 دقيقة بالسيارة</span><span class="en-v">45 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 19 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/19.JPG" alt="Wadi Dayqah Dam">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">سد وادي ضيقة</h3><h3 class="en-v">Wadi Dayqah Dam</h3>
+                    <p class="ar-v">أكبر سد في سلطنة عُمان، يقع في قريات ويوفر إطلالات هندسية وبصرية مذهلة بين البحيرة والجبال.</p>
+                    <p class="en-v">The largest dam in Oman, located in Quriyat, offering stunning views of lake and mountains.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">40 دقيقة بالسيارة</span><span class="en-v">40 minutes drive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلم 20 -->
+            <div class="landmark-card">
+                <div class="landmark-img-box">
+                    <img src="images/20.JPG" alt="Ras Al Jinz">
+                </div>
+                <div class="landmark-info">
+                    <h3 class="ar-v">محمية السلاحف برأس الجنز</h3><h3 class="en-v">Ras Al Jinz Turtle Reserve</h3>
+                    <p class="ar-v">تجربة استثنائية لمشاهدة السلاحف الخضراء النادرة في بيئتها الطبيعية على الشاطئ.</p>
+                    <p class="en-v">An extraordinary eco-tourism experience to watch rare green turtles nest in their habitat.</p>
+                    <div class="landmark-distance">
+                        <i class="fas fa-car"></i>
+                        <span class="ar-v">1 ساعة و 15 دقيقة</span><span class="en-v">1h 15m drive</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title ar-v">نظرة واضحة على الإقامة</h2>
+        <h2 class="gallery-title en-v">A Clear Look at the Accommodation</h2>
+        
+        <p class="gallery-subtitle ar-v">تعرّف على الشاليه قبل الوصول: المسبح، غرف النوم، المطبخ، الجلسات الخارجية، مساحة العائلة والمعلم القريب.</p>
+        <p class="gallery-subtitle en-v">Get to know the chalet before arrival: the pool, bedrooms, kitchen, outdoor seating, family area, and the nearby attraction.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/1.JPG" alt="Chalet Image 1">
+                <div class="item-overlay">
+                    <span class="ar-v">المساحة الخارجية</span>
+                    <span class="en-v">The Pool & Outdoor Seating</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/2.JPG" alt="Chalet Image 2">
+                <div class="item-overlay">
+                    <span class="ar-v">الجلسات الخارجية</span>
+                    <span class="en-v">Chalet Exterior & Luxury Stay</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/3.JPG" alt="Chalet Image 3">
+                <div class="item-overlay">
+                    <span class="ar-v">الغرفة الرئيسية</span>
+                    <span class="en-v">Family Spaces</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/4.JPG" alt="Chalet Image 4">
+                <div class="item-overlay">
+                    <span class="ar-v">الغرفة الثانية</span>
+                    <span class="en-v">Kitchen & Facilities</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/5.JPG" alt="Chalet Image 5">
+                <div class="item-overlay">
+                    <span class="ar-v">المسبح الخارجي</span>
+                    <span class="en-v">Comfortable Bedrooms</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/6.JPG" alt="Chalet Image 6">
+                <div class="item-overlay">
+                    <span class="ar-v">الإسترخاء</span>
+                    <span class="en-v">Breathtaking Views</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/7.JPG" alt="Chalet Image 7">
+                <div class="item-overlay">
+                    <span class="ar-v">ألعاب الأطفال</span>
+                    <span class="en-v">Evening Seating</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/8.JPG" alt="Chalet Image 8">
+                <div class="item-overlay">
+                    <span class="ar-v">الصالة وطاولة الطعام</span>
+                    <span class="en-v">Nearby Attractions</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/9.JPG" alt="Chalet Image 9">
+                <div class="item-overlay">
+                    
+                    <span class="en-v">Nearby Attractions</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/10.JPG" alt="Chalet Image 10">
+                <div class="item-overlay">
+                   
+                    <span class="en-v">Nearby Attractions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #fdfdfd; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+        <h2 class="section-title">
+            <span class="ar-v">التجهيزات</span>
+            <span class="en-v">What We Offer</span>
+            <div class="ar-v">ما نجهزه لك</div>
+            <div class="en-v">Equipped For You</div>
+        </h2>
+        <p style="margin-top: -30px; margin-bottom: 40px; color: #64748b; font-size: 1.1rem; text-align: center;" class="ar-v">كل ما تحتاجه لإقامة خاصة ومريحة: وصول سهل، مواقف، اتصال، مطبخ، مسبح ووقت هادئ.</p>
+        <p style="margin-top: -30px; margin-bottom: 40px; color: #64748b; font-size: 1.1rem; text-align: center;" class="en-v">Everything you need for a private & comfortable stay: easy access, parking, connectivity, kitchen, pool and quiet time.</p>
+
+        <div class="amenities-grid">
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-umbrella-beach"></i></div>
+                <span class="ar-v">وصول للشاطئ</span><span class="en-v">Beach Access</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-wifi"></i></div>
+                <span class="ar-v">واي فاي</span><span class="en-v">Wi-Fi</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-utensils"></i></div>
+                <span class="ar-v">مطبخ</span><span class="en-v">Kitchen</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-parking"></i></div>
+                <span class="ar-v">مواقف مجانية</span><span class="en-v">Free Parking</span>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-swimming-pool"></i></div>
+                <span class="ar-v">مسبح خاص</span><span class="en-v">Private Pool</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-tv"></i></div>
+                <span class="ar-v">تلفزيون</span><span class="en-v">Television</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-tshirt"></i></div>
+                <span class="ar-v">غسالة</span><span class="en-v">Washing Machine</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-snowflake"></i></div>
+                <span class="ar-v">تكييف هواء</span><span class="en-v">Air Conditioning</span>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-shower"></i></div>
+                <span class="ar-v">دش خارجي</span><span class="en-v">Outdoor Shower</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-fire"></i></div>
+                <span class="ar-v">موقد نار</span><span class="en-v">Fire Pit</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-hamburger"></i></div>
+                <span class="ar-v">طعام خارجي</span><span class="en-v">Outdoor Dining</span>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-circle"><i class="fas fa-restroom"></i></div>
+                <span class="ar-v">حمامات</span><span class="en-v">Bathrooms</span>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #fafafa;">
+        <h2 class="section-title">
+            <span class="ar-v">الاستفسارات</span>
+            <span class="en-v">FAQ</span>
+            <div class="ar-v">أسئلة سريعة</div>
+            <div class="en-v">Quick Questions</div>
+        </h2>
+        
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h4 class="ar-v">هل الشاليه كامل خاص؟</h4>
+                <h4 class="en-v">Is the chalet completely private?</h4>
+                <p class="ar-v">نعم، الشاليه خاص لك خلال الإقامة ويتسع حتى 5 ضيوف.</p>
+                <p class="en-v">Yes, the chalet is entirely private for you during your stay and accommodates up to 5 guests.</p>
+            </div>
+            <div class="faq-card">
+                <h4 class="ar-v">ماذا نوفر？</h4>
+                <h4 class="en-v">What do we provide?</h4>
+                <p class="ar-v">نوفر غرفتي نوم، 4 أسِرّة، حمامين، مسبح، مطبخ، واي فاي، مواقف مجانية، تلفزيون، غسالة، تكييف، طعام خارجي، موقد نار ودش خارجي.</p>
+                <p class="en-v">We provide 2 bedrooms, 4 beds, 2 bathrooms, a pool, kitchen, Wi-Fi, free parking, TV, washing machine, AC, outdoor dining, fire pit, and an outdoor shower.</p>
+            </div>
+            <div class="faq-card">
+                <h4 class="ar-v">هل يناسب العائلات؟</h4>
+                <h4 class="en-v">Is it suitable for families?</h4>
+                <p class="ar-v">نعم، التخطيط والمساحة الخارجية يجعلون الشاليه مناسباً للعائلات أو المجموعات الصغيرة. نستقبل حتى 5 ضيوف.</p>
+                <p class="en-v">Yes, the layout and outdoor space make the chalet ideal for families or small groups. We welcome up to 5 guests.</p>
+            </div>
+            <div class="faq-card">
+                <h4 class="ar-v">كيف يتم الحجز؟</h4>
+                <h4 class="en-v">How is the booking made?</h4>
+                <p class="ar-v">واتساب هو الأسرع للاستفسار عن التوفر وتفاصيل الوصول. Airbnb متاح إذا أردت مراجعة الإقامة هناك.</p>
+                <p class="en-v">WhatsApp is the fastest way to inquire about availability and arrival details. Airbnb is also available if you prefer to review the listing there.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title ar-v">جاهز للاستفسار عن التواريخ？</h2>
+        <h2 class="cta-title en-v">Ready to Inquire About Dates?</h2>
+        
+        <p class="cta-subtitle ar-v">راسلنا عبر واتساب للحصول على أسرع رد. يمكنك أيضاً مراجعة Booking.com أو إنستغرام أو الخرائط قبل القرار.</p>
+        <p class="cta-subtitle en-v">Message us via WhatsApp for the fastest response. You can also check Booking.com, Instagram, or Maps before deciding.</p>
+        
+        <div class="cta-grid">
+            <a href="https://api.whatsapp.com/send?phone=96892660332" target="_blank" class="cta-card">
+                <div class="cta-icon-box bg-wa"><i class="fab fa-whatsapp"></i></div>
+                <h4>واتساب</h4>
+                <p class="ar-v">الرد السريع للحجز والاستفسارات المباشرة</p>
+                <p class="en-v">Fast response for direct bookings & inquiries</p>
+            </a>
+
+            <a href="https://www.instagram.com/sinkhole.chalet?igsh=amQ2MWl5bW56dm43" target="_blank" class="cta-card">
+                <div class="cta-icon-box bg-ig"><i class="fab fa-instagram"></i></div>
+                <h4>إنستغرام</h4>
+                <p class="ar-v">تابع تغطياتنا وشاركنا ذكرياتك الجميلة</p>
+                <p class="en-v">Check our highlights and guest memories</p>
+            </a>
+
+            <a href="https://www.booking.com/Share-ijOpCkP/" target="_blank" class="cta-card">
+                <div class="cta-icon-box bg-bk"><i class="fas fa-bookmark"></i></div>
+                <h4>Booking.com</h4>
+                <p class="ar-v">اطلع على تقييمات النزلاء وخيارات الحجز</p>
+                <p class="en-v">Review guest ratings & booking policies</p>
+            </a>
+
+            <a href="https://maps.app.goo.gl/JswkbRzMsK6tkWxz5?g_st=am"_blank" class="cta-card">
+                <div class="cta-icon-box bg-map"><i class="fas fa-map-marked-alt"></i></div>
+                <h4>الموقع</h4>
+                <p class="ar-v">احسب خط سير رحلتك الساحلية الممتعة</p>
+                <p class="en-v">Calculate paths along your coastal drive</p>
+            </a>
+        </div>
+    </section>
+
+   <a href="https://api.whatsapp.com/send?phone=96892660332" target="_blank" class="whatsapp-pulse" style="text-decoration: none;">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <footer>
+        <p>© 2026 Sinkhole Chalet. All Rights Reserved. Private Villa in Dibab, Oman.</p>
+    </footer>
+
+    <script>
+       
+
+        function switchLanguage() {
+            const htmlTag = document.documentElement;
+            const toggleBtn = document.querySelector('.lang-toggle-btn');
+            
+            if (htmlTag.getAttribute('dir') === 'rtl') {
+                htmlTag.setAttribute('dir', 'ltr');
+                htmlTag.setAttribute('lang', 'en');
+                toggleBtn.textContent = 'العربية';
+            } else {
+                htmlTag.setAttribute('dir', 'rtl');
+                htmlTag.setAttribute('lang', 'ar');
+                toggleBtn.textContent = 'English';
+            }
+        }
+
+    </script>
+</body>
+</html>
