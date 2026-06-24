@@ -197,6 +197,38 @@
 
         html[dir="rtl"] .en-v { display: none !important; }
         html[dir="ltr"] .ar-v { display: none !important; }
+        /* --- تنسيقات إضافية للهواتف لضبط الحجم والحركة --- */
+@media (max-width: 768px) {
+    /* ضبط حجم النصوص لتكون مناسبة */
+    h1, .section-title { font-size: 1.5rem !important; }
+    p { font-size: 0.9rem !important; }
+    
+    /* جعل الصور تأخذ عرض الشاشة بالكامل وبشكل متناسق */
+    .landmark-card {
+        width: 95% !important;
+        margin: 10px auto !important;
+    }
+    
+    /* إظهار العناوين دائماً تحت الصور في الهاتف بدلاً من الاعتماد على الفأرة */
+    .landmark-img-box img {
+        filter: brightness(0.8); /* تعتيم بسيط للصور لتوضيح النص */
+    }
+    
+    .landmark-info {
+        display: block !important;
+        opacity: 1 !important; /* إظهار النصوص دائماً */
+        padding: 10px;
+    }
+}
+
+/* إضافة لمسة حركية عند اللمس */
+.landmark-card {
+    transition: all 0.4s ease;
+}
+
+.landmark-card:active {
+    transform: scale(0.97); /* اهتزاز بسيط عند الضغط */
+}
     </style>
 </head>
 <body>
