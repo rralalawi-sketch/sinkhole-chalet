@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <style>
+        /* إخفاء العناصر قبل ظهورها لجعل الحركة تبدأ بشكل صحيح */
+.landmark-card {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* التنسيق الخاص بالهاتف */
+@media (max-width: 768px) {
+    .landmark-card {
+        width: 90% !important;
+        margin: 20px auto !important;
+    }
+}
         html{color-scheme:light;}
         :root {
             --dark-slate: #21323a;
@@ -759,5 +772,22 @@
         }
 
     </script>
+    <script>
+    // هذا الكود يراقب نزولك في الصفحة
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // عند وصولك للعنصر، أضف كلاس الحركة
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, { threshold: 0.1 }); // تظهر الصورة عندما يظهر 10% منها فقط
+
+    // طبق هذا على كل المربعات في موقعك
+    document.querySelectorAll('.landmark-card').forEach(card => {
+        observer.observe(card);
+    });
+</script>
 </body>
 </html>
