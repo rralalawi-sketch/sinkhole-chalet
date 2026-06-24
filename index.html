@@ -773,20 +773,23 @@
 
     </script>
     <script>
-    // هذا الكود يراقب نزولك في الصفحة
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // عند وصولك للعنصر، أضف كلاس الحركة
-                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
                 entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, { threshold: 0.1 }); // تظهر الصورة عندما يظهر 10% منها فقط
+    }, { threshold: 0.1 });
 
-    // طبق هذا على كل المربعات في موقعك
-    document.querySelectorAll('.landmark-card').forEach(card => {
-        observer.observe(card);
+    // هنا السر: أضفنا كل الكلاسات التي تريدها أن تتحرك
+    const elementsToAnimate = document.querySelectorAll('.landmark-card, .section-title, .info-box, footer');
+    
+    elementsToAnimate.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'all 0.8s ease-out';
+        el.style.transform = 'translateY(30px)';
+        observer.observe(el);
     });
 </script>
 </body>
