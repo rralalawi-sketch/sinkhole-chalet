@@ -41,7 +41,9 @@
         html[dir="rtl"] body { font-family: 'Tajawal', sans-serif; }
         html[dir="ltr"] body { font-family: 'Outfit', sans-serif; }
         
-        body { background-color: var(--soft-white); color: #334155; overflow-x: hidden; }
+        body { background-color: var(--soft-white); color: #334155; overflow-x: hidden; padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;}
 
         header { 
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://sinkhole-chalet.pages.dev/sinkhole/chalet-exterior-night-1200.webp') no-repeat center center/cover; 
@@ -244,6 +246,20 @@
 
 .landmark-card:active {
     transform: scale(0.97); /* اهتزاز بسيط عند الضغط */
+}
+        @media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.8rem !important; /* تصغير حجم الخط */
+        line-height: 1.4;            /* زيادة التباعد بين السطور ليصبح النص أوضح */
+        margin-bottom: 15px;         /* مسافة بين العنوان والنص الذي تحته */
+    }
+    
+    /* لضبط النصوص الفرعية لتكون مريحة للعين */
+    p {
+        font-size: 1rem !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
     </style>
 </head>
