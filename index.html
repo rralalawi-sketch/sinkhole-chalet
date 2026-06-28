@@ -55,7 +55,26 @@
         }
                 html[dir="ltr"] .lang-toggle-btn { left: auto; right: 30px; }
         .lang-toggle-btn:hover { background: var(--gold-premium); border-color: var(--gold-premium); transform: scale(1.05); }
+.navbar {
+    background-color: white; 
+    /* زيادة الـ padding من الأعلى والأسفل لجعله أعرض */
+    padding: 25px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+.logo {
+    font-weight: bold;
+    color: #334155;
+    /* زيادة حجم خط الشعار ليتناسب مع عرض الشريط */
+    font-size: 1.5rem; 
+}
         header h1 { font-size: 4rem; margin-bottom: 20px; color: var(--gold-premium); font-weight: 900; }
         html[dir="rtl"] header h1 { font-family: 'Amiri', serif; font-style: italic; }
         html[dir="ltr"] header h1 { font-family: 'Playfair Display', serif; }
